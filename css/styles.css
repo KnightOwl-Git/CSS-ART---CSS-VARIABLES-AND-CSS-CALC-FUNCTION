@@ -1,0 +1,73 @@
+:root {
+
+    /* variables to use for the colors of the shapes */
+
+    --blueish: rgb(114, 228, 224);
+    --greenish: rgb(160, 225, 90);
+    --redish: rgb(255, 76, 127);
+
+
+    /* use for the width of shape 3 */
+
+    --shape3width: 40vw;
+
+}
+
+
+
+/* code for each shape */
+
+
+#shape1 {
+    background-color: var(--blueish);
+    inset: 50px 130px;
+    width: calc(var(--shape3width)/2);
+    height: 200px;
+    position:absolute;
+    border-radius: 100vw;
+    mix-blend-mode: multiply;
+
+}
+#shape2 {
+    background-color: var(--greenish);
+    width: 200px;
+    height: 400px;
+    position:absolute;
+    mix-blend-mode: multiply;
+    inset: 400px 29px;
+    
+
+}
+#shape3 {
+    background-color: var(--redish);
+    width: var(--shape3width);
+    height: 600px;
+    border-radius: 100vw;
+    position:absolute;
+    mix-blend-mode: multiply;
+
+
+
+    
+}
+#shape4 {
+    background: linear-gradient(rgb(0, 255, 247), rgb(77, 255, 163));
+    width: 90px;
+    height: 40px;
+    position:absolute;
+    mix-blend-mode: multiply;
+    inset: 0px -70px;
+
+}
+
+#container {
+
+    /* using relative on the container so that I can move the whole thing to the center while keeping absolute positioning on the children */
+    position:relative;
+    width:max-content;
+    margin: auto;
+
+    * {
+        transform: translateX(-50%);
+    }
+}
